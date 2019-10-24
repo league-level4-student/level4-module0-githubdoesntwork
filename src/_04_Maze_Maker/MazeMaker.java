@@ -25,8 +25,8 @@ public class MazeMaker{
 		Random r = new Random();
 		selectNextPath(maze.getCell(r.nextInt(width), r.nextInt(height)));
 		//5. call selectNextPath method with the randomly selected cell
-		
-		
+		maze.getCell(0, r.nextInt(height)).setWestWall(false);
+		maze.getCell(width-1, r.nextInt(height)).setEastWall(false);
 		return maze;
 	}
 
